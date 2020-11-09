@@ -1,5 +1,5 @@
 import React from "react";
-import { Fade } from "@material-ui/core";
+import { Fade, Divider } from "@material-ui/core";
 import { FaAward, FaExternalLinkAlt, FaCog } from "react-icons/fa/index";
 
 import {
@@ -64,6 +64,7 @@ function Navbar() {
             <FaCog size={14} />
             &nbsp;Configurações
           </MenuItemNav>
+          <Divider />
           <MenuItemNav onClick={handleClose}>
             <FaExternalLinkAlt size={14} />
             &nbsp;Sair
