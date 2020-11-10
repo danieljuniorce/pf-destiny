@@ -8,6 +8,7 @@ import {
   FaExclamationCircle,
 } from "react-icons/fa/index";
 
+import { TitlePage } from "../../components/global";
 import Navbar from "../../components/Navbar";
 import {
   Container,
@@ -33,6 +34,7 @@ function Dashboard() {
   return (
     <>
       <Navbar />
+      <TitlePage>Dashboard</TitlePage>
       <Container>
         <PainelLeft>
           <Button color="#0000FF">Solicitações</Button>

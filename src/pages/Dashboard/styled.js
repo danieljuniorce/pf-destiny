@@ -4,7 +4,7 @@ import { LinkButton } from "../../components/global";
 const Container = styled.div`
   width: 100%;
   display: flex;
-  margin-top: 30px;
+  margin-top: 20px;
 `;
 
 const PainelLeft = styled.div`

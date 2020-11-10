@@ -1,6 +1,7 @@
 import React from "react";
 import { Fade, Divider } from "@material-ui/core";
 import { FaAward, FaExternalLinkAlt, FaCog } from "react-icons/fa/index";
+import { Link } from "react-router-dom";
 
 import {
   Container,
@@ -14,7 +15,7 @@ import {
 } from "./styled";
 
 import logo from "../../assets/logo.png";
-import perfil from "../../assets/perfil.jpg";
+import perfil from "../../assets/perfil.png";
 
 function Navbar() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -32,12 +33,12 @@ function Navbar() {
     <Container>
       <Lista>
         <Logo src={logo} alt="logo" />
-        <Links style={{ marginLeft: "14px" }} to="!#">
+        <Links style={{ marginLeft: "14px" }} to="/dashboard">
           Dashboard
         </Links>
-        <Links to="!#">Contigente</Links>
-        <Links to="!#">Arquivos</Links>
-        <Links to="!#">Procurados</Links>
+        <Links to="/contigente">Contigente</Links>
+        <Links to="/arquivos">Arquivos</Links>
+        <Links to="/procurados">Procurados</Links>
       </Lista>
       <Lista>
         <ButtonMenu
@@ -58,16 +59,46 @@ function Navbar() {
         >
           <MenuItemNav onClick={handleClose}>
             <FaAward size={14} />
-            &nbsp;Perfil
+            &nbsp;
+            <Link
+              to="/usuario/perfil"
+              style={{
+                textDecoration: "none",
+                color: "#000",
+                fontSize: "14pt",
+              }}
+            >
+              Perfil
+            </Link>
           </MenuItemNav>
           <MenuItemNav onClick={handleClose}>
             <FaCog size={14} />
-            &nbsp;Configurações
+            &nbsp;
+            <Link
+              to="/usuario/configuracao"
+              style={{
+                textDecoration: "none",
+                color: "#000",
+                fontSize: "14pt",
+              }}
+            >
+              Configurações
+            </Link>
           </MenuItemNav>
           <Divider />
           <MenuItemNav onClick={handleClose}>
             <FaExternalLinkAlt size={14} />
-            &nbsp;Sair
+            &nbsp;
+            <Link
+              to="/login"
+              style={{
+                textDecoration: "none",
+                color: "#000",
+                fontSize: "14pt",
+              }}
+            >
+              Sair
+            </Link>
           </MenuItemNav>
         </MenuNav>
       </Lista>

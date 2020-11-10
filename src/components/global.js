@@ -44,10 +44,19 @@ const InputLabelType = styled(InputLabel)`
 
 const FormHelperTextType = styled(FormHelperText)``;
 
+const TitlePage = styled.h1`
+  color: #ddd;
+  margin-top: 30px;
+  font-weight: 400;
+
+  margin-left: 50px;
+`;
+
 export {
   LinkButton,
   InputType,
   FormControlType,
   InputLabelType,
   FormHelperTextType,
+  TitlePage,
 };
