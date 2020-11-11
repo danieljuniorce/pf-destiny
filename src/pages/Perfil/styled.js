@@ -164,6 +164,12 @@ const Cargo = styled.p`
   font-size: 14pt;
 `;
 
+const NumberDistinctive = styled.p`
+  margin-top: 30px;
+  font-size: 10pt;
+  font-style: italic;
+`;
+
 export {
   Container,
   ContentPerfil,
@@ -182,4 +188,5 @@ export {
   Status,
   Name,
   Cargo,
+  NumberDistinctive,
 };

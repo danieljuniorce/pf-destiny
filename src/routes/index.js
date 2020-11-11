@@ -7,6 +7,9 @@ import Register from "../pages/Register";
 import Dashboard from "../pages/Dashboard";
 import Perfil from "../pages/Perfil";
 import Configurate from "../pages/Configurate";
+import Order from "../pages/Order";
+import Inquerito from "../pages/Inquerito";
+import Boletim from "../pages/Boletim";
 
 const Routes = () => (
   <BrowserRouter>
@@ -18,6 +21,10 @@ const Routes = () => (
       <Route path="/dashboard" component={Dashboard} />
       <Route path="/usuario/perfil" component={Perfil} />
       <Route path="/usuario/configuracao" component={Configurate} />
+
+      <Route path="/arquivos/solicitacoes" component={Order} />
+      <Route path="/arquivos/boletim" component={Boletim} />
+      <Route path="/arquivos/inquerito" component={Inquerito} />
     </Switch>
   </BrowserRouter>
 );

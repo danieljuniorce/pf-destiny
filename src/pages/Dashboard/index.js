@@ -8,7 +8,7 @@ import {
   FaExclamationCircle,
 } from "react-icons/fa/index";
 
-import { TitlePage } from "../../components/global";
+import { TitlePage, LinkButton } from "../../components/global";
 import Navbar from "../../components/Navbar";
 import {
   Container,
@@ -19,7 +19,6 @@ import {
   ContCard,
   StructText,
   StructIcon,
-  Button,
   Cards,
   TextTitleWarning,
   PainelTitleWarning,
@@ -37,10 +36,21 @@ function Dashboard() {
       <TitlePage>Dashboard</TitlePage>
       <Container>
         <PainelLeft>
-          <Button color="#0000FF">Solicitações</Button>
-          <Button color="#1CC88A">Nova Ocorrência</Button>
-          <Button color="gray">Novo Inquerito</Button>
-          <Button color="red">Novo Mandado</Button>
+          <LinkButton
+            style={{ background: "#0000FF" }}
+            to="/arquivos/solicitacoes"
+          >
+            Solicitações
+          </LinkButton>
+          <LinkButton style={{ background: "#1CC88A" }} to="/arquivos/boletim">
+            Nova Ocorrência
+          </LinkButton>
+          <LinkButton style={{ background: "gray" }} to="/arquivos/inquerito">
+            Novo Inquerito
+          </LinkButton>
+          <LinkButton style={{ background: "red" }} to="/arquivos/mandado">
+            Novo Mandado
+          </LinkButton>
         </PainelLeft>
         <PainelRight>
           <Cards>

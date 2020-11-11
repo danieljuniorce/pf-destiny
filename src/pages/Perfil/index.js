@@ -17,6 +17,7 @@ import {
   Status,
   PerfilImg,
   Cargo,
+  NumberDistinctive,
 } from "./styled";
 import Navbar from "../../components/Navbar";
 import { TitlePage } from "../../components/global";
@@ -29,7 +30,7 @@ function Perfil() {
     <>
       <Navbar />
 
-      <TitlePage>Perfil</TitlePage>
+      <TitlePage style={{ marginLeft: "115px" }}>Perfil</TitlePage>
 
       <Container>
         <ContentPerfil>
@@ -88,6 +89,7 @@ function Perfil() {
           <Status color="green">Online</Status>
           <Name>Daniel Souza</Name>
           <Cargo>Diretor de Inteligência Policial</Cargo>
+          <NumberDistinctive>Distintivo Nº 01</NumberDistinctive>
 
           <UserInfoText style={{ marginTop: "30px" }}>
             Condecorações
