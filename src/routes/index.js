@@ -7,9 +7,11 @@ import Register from "../pages/Register";
 import Dashboard from "../pages/Dashboard";
 import Perfil from "../pages/Perfil";
 import Configurate from "../pages/Configurate";
+import File from "../pages/File";
 import Order from "../pages/Order";
 import Inquerito from "../pages/Inquerito";
 import Boletim from "../pages/Boletim";
+import Mandado from "../pages/Mandado";
 
 const Routes = () => (
   <BrowserRouter>
@@ -22,9 +24,11 @@ const Routes = () => (
       <Route path="/usuario/perfil" component={Perfil} />
       <Route path="/usuario/configuracao" component={Configurate} />
 
+      <Route path="/arquivos" component={File} />
       <Route path="/arquivos/solicitacoes" component={Order} />
       <Route path="/arquivos/boletim" component={Boletim} />
       <Route path="/arquivos/inquerito" component={Inquerito} />
+      <Route path="/arquivos/mandado" component={Mandado} />
     </Switch>
   </BrowserRouter>
 );

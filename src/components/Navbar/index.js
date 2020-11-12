@@ -36,8 +36,9 @@ function Navbar() {
         <Links style={{ marginLeft: "14px" }} to="/dashboard">
           Dashboard
         </Links>
-        <Links to="/contigente">Contigente</Links>
         <Links to="/arquivos">Arquivos</Links>
+
+        <Links to="/contigente">Contigente</Links>
         <Links to="/procurados">Procurados</Links>
       </Lista>
       <Lista>

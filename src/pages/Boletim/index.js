@@ -45,11 +45,11 @@ function Boletim() {
             <GroupInline>
               <Group>
                 <Label>Hora da Comunicação</Label>
-                <Input />
+                <Input type="datetime-local" />
               </Group>
               <Group style={{ marginLeft: "10px" }}>
                 <Label>Hora da Ocorrência</Label>
-                <Input />
+                <Input type="datetime-local" />
               </Group>
             </GroupInline>
 

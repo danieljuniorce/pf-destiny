@@ -35,23 +35,7 @@ function Dashboard() {
       <Navbar />
       <TitlePage>Dashboard</TitlePage>
       <Container>
-        <PainelLeft>
-          <LinkButton
-            style={{ background: "#0000FF" }}
-            to="/arquivos/solicitacoes"
-          >
-            Solicitações
-          </LinkButton>
-          <LinkButton style={{ background: "#1CC88A" }} to="/arquivos/boletim">
-            Nova Ocorrência
-          </LinkButton>
-          <LinkButton style={{ background: "gray" }} to="/arquivos/inquerito">
-            Novo Inquerito
-          </LinkButton>
-          <LinkButton style={{ background: "red" }} to="/arquivos/mandado">
-            Novo Mandado
-          </LinkButton>
-        </PainelLeft>
+        <PainelLeft></PainelLeft>
         <PainelRight>
           <Cards>
             <Card color="blue">
