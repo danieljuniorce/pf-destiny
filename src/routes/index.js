@@ -24,7 +24,7 @@ const Routes = () => (
       <Route path="/usuario/perfil" component={Perfil} />
       <Route path="/usuario/configuracao" component={Configurate} />
 
-      <Route path="/arquivos" component={File} />
+      <Route path="/arquivos" exact component={File} />
       <Route path="/arquivos/solicitacoes" component={Order} />
       <Route path="/arquivos/boletim" component={Boletim} />
       <Route path="/arquivos/inquerito" component={Inquerito} />

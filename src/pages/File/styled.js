@@ -62,6 +62,14 @@ const SecondTitlePainel = styled.p`
   margin-right: 30px;
 `;
 
+const NameGroup = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 20px;
+`;
+
 const TitleNameGroup = styled.p`
   text-align: left;
   margin-bottom: 15px;
@@ -71,8 +79,15 @@ const TitleNameGroup = styled.p`
   opacity: 0.7;
 `;
 
+const ButtonNameGroup = styled(LinkButton)`
+  width: 180px;
+  height: 50px;
+  line-height: 50px;
+  margin: 0;
+`;
+
 const Menu = styled.div`
-  width: 220px;
+  width: 280px;
   margin-left: 30px;
 `;
 
@@ -82,7 +97,7 @@ const Menus = styled.ul`
 
 const MenuItem = styled.li``;
 
-const MenuButton = styled.button`
+const MenuButton = styled.div`
   width: 100%;
   background: #101021;
   color: #ddd;
@@ -161,7 +176,9 @@ export {
   PainelTitle,
   FirstTitlePainel,
   SecondTitlePainel,
+  NameGroup,
   TitleNameGroup,
+  ButtonNameGroup,
   Menu,
   Menus,
   MenuItem,
