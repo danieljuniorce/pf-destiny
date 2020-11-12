@@ -104,10 +104,10 @@ function Boletim() {
               <Label>Histórico</Label>
               <TextArea rows="10" />
             </Group>
+            <Final>
+              <ButtonCreate>Cadastra Ocorrência</ButtonCreate>
+            </Final>
           </Form>
-          <Final>
-            <ButtonCreate>Cadastra Ocorrência</ButtonCreate>
-          </Final>
         </Painel>
       </Container>
     </>
