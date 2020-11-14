@@ -12,6 +12,9 @@ import Order from "../pages/Order";
 import Inquerito from "../pages/Inquerito";
 import Boletim from "../pages/Boletim";
 import Mandado from "../pages/Mandado";
+import InqueritoDocuments from "../pages/Documents/Inquerito";
+import BoletimDocuments from "../pages/Documents/Boletim";
+import MandadoDocuments from "../pages/Documents/Mandado";
 
 const Routes = () => (
   <BrowserRouter>
@@ -29,6 +32,13 @@ const Routes = () => (
       <Route path="/arquivos/boletim" component={Boletim} />
       <Route path="/arquivos/inquerito" component={Inquerito} />
       <Route path="/arquivos/mandado" component={Mandado} />
+
+      <Route path="/documentos/boletim/:number" component={BoletimDocuments} />
+      <Route
+        path="/documentos/inquerito/:number"
+        component={InqueritoDocuments}
+      />
+      <Route path="/documentos/mandado/:number" component={MandadoDocuments} />
     </Switch>
   </BrowserRouter>
 );

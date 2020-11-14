@@ -148,43 +148,10 @@ class File extends Component {
                       <TableTd>13/11/2020 06:56</TableTd>
                       <TableTd>
                         <Buttons>
-                          <Button background="blue">
-                            <FaEye size={15} />
-                          </Button>
-                          <Button background="green">
-                            <FaEdit size={15} />
-                          </Button>
-                          <Button background="yellowgreen">
-                            <FaPrint size={15} />
-                          </Button>
-                        </Buttons>
-                      </TableTd>
-                    </TableTr>
-                    <TableTr>
-                      <TableTd>2</TableTd>
-                      <TableTd>Daniel Souza</TableTd>
-                      <TableTd>13/11/2020 06:56</TableTd>
-                      <TableTd>
-                        <Buttons>
-                          <Button background="blue">
-                            <FaEye size={15} />
-                          </Button>
-                          <Button background="green">
-                            <FaEdit size={15} />
-                          </Button>
-                          <Button background="yellowgreen">
-                            <FaPrint size={15} />
-                          </Button>
-                        </Buttons>
-                      </TableTd>
-                    </TableTr>
-                    <TableTr>
-                      <TableTd>3</TableTd>
-                      <TableTd>Daniel Souza</TableTd>
-                      <TableTd>13/11/2020 06:56</TableTd>
-                      <TableTd>
-                        <Buttons>
-                          <Button background="blue">
+                          <Button
+                            background="blue"
+                            to="/documentos/boletim/1232342"
+                          >
                             <FaEye size={15} />
                           </Button>
                           <Button background="green">
@@ -219,24 +186,6 @@ class File extends Component {
                   <TableBody>
                     <TableTr>
                       <TableTd>1</TableTd>
-                      <TableTd>Daniel Souza</TableTd>
-                      <TableTd>13/11/2020 06:56</TableTd>
-                      <TableTd>
-                        <Buttons>
-                          <Button background="blue">
-                            <FaEye size={15} />
-                          </Button>
-                          <Button background="green">
-                            <FaEdit size={15} />
-                          </Button>
-                          <Button background="yellowgreen">
-                            <FaPrint size={15} />
-                          </Button>
-                        </Buttons>
-                      </TableTd>
-                    </TableTr>
-                    <TableTr>
-                      <TableTd>2</TableTd>
                       <TableTd>Daniel Souza</TableTd>
                       <TableTd>13/11/2020 06:56</TableTd>
                       <TableTd>

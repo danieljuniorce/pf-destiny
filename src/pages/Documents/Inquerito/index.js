@@ -1,12 +1,13 @@
 import React from "react";
+import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer";
 
 import { Container } from "./styled";
 
-function Inquerito() {
+function Inquerito(props) {
   return (
-    <>
-      <Container></Container>
-    </>
+    <Document>
+      <Container>{props.match.params.number}</Container>
+    </Document>
   );
 }
 
