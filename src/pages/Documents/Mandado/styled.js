@@ -11,13 +11,13 @@ const Container = styled.div`
 `;
 
 const Return = styled.div`
-  width: 100%;
   padding: 30px;
   background: #fff;
   font-size: 16pt;
 
   display: flex;
   align-items: center;
+  overflow-x: unset;
 `;
 
 const ButtonReturn = styled(Link)`
@@ -61,6 +61,11 @@ const TitleName = styled.h1``;
 
 const TitleComplementare = styled.h3`
   font-weight: 100;
+`;
+
+const MandadoTitle = styled.h1`
+  text-align: center;
+  margin-bottom: 30px;
 `;
 
 const View = styled.div`
@@ -119,6 +124,7 @@ const Provas = styled.div`
 
 const ProvasImg = styled.p`
   margin: 15px;
+  text-align: center;
 `;
 
 const Expedido = styled.div`
@@ -183,4 +189,5 @@ export {
   Solicitante,
   Delegado,
   Rodape,
+  MandadoTitle,
 };

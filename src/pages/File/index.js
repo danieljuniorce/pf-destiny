@@ -190,7 +190,10 @@ class File extends Component {
                       <TableTd>13/11/2020 06:56</TableTd>
                       <TableTd>
                         <Buttons>
-                          <Button background="blue">
+                          <Button
+                            background="blue"
+                            to="/documentos/inquerito/1232342"
+                          >
                             <FaEye size={15} />
                           </Button>
                           <Button background="green">
@@ -229,7 +232,10 @@ class File extends Component {
                       <TableTd>13/11/2020 06:56</TableTd>
                       <TableTd>
                         <Buttons>
-                          <Button background="blue">
+                          <Button
+                            background="blue"
+                            to="/documentos/mandado/1232342"
+                          >
                             <FaEye size={15} />
                           </Button>
                           <Button background="green">

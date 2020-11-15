@@ -12,15 +12,14 @@ import {
   TitleName,
   CategoriaName,
   InfoName,
-  EmissorName,
   AtosProcesso,
   Processo,
   Provas,
   Solicitante,
   Expedido,
-  ProvasImg,
-  Delegado,
   Rodape,
+  MandadoTitle,
+  InfoNameInline,
 } from "./styled";
 import { FaArrowLeft } from "react-icons/fa/index";
 
@@ -41,59 +40,87 @@ function Boletim(props) {
         </TitleImg>
         <Title>
           <TitleName>Policia Federal do Brasil</TitleName>
-          <TitleComplementare>Comarca do Destiny Roleplay</TitleComplementare>
-          <TitleComplementare>1º Vara Criminal</TitleComplementare>
+          <TitleComplementare>
+            Ministério da Justiça e Segurança Pública
+          </TitleComplementare>
+          <TitleComplementare>Superintendência Regional</TitleComplementare>
         </Title>
       </Header>
       <Container>
         <View>
-          <CategoriaName>Informações</CategoriaName>
+          <MandadoTitle>Boletim de Ocorrência</MandadoTitle>
+          <CategoriaName>Dados da Ocorrência</CategoriaName>
           <hr style={{ marginBottom: "15px" }} />
           <InfoName>
-            <span>Autos:</span> {props.match.params.number}
+            <span>Natureza do Fato:</span> Roubo de Veículo
           </InfoName>
-          <InfoName>
-            <span>Réu:</span> Gabriel Budag
-          </InfoName>
-          <InfoName>
-            <span>Registro Geral:</span> 239
-          </InfoName>
-          <InfoName>
-            <span>Local de Atuação:</span> Los Santos
-          </InfoName>
-          <InfoName>
-            <span>Inquerito:</span> 2132
-          </InfoName>
+          <InfoNameInline>
+            <InfoName>
+              <span>Data/Hora da Comunicação</span> 15/11/2020 02:59
+            </InfoName>
+            <InfoName>
+              <span>Data/Hora da Ocorrência</span> 15/11/2020 02:59
+            </InfoName>
+          </InfoNameInline>
 
-          <EmissorName>
-            Em juízo de expedição do{" "}
-            <span>Diretor de Inteligência Policial da Polícia</span> Federal do
-            Brasil <span>Daniel Souza</span>, situado no Estado Destiny
-            Roleplay, na forma da lei.
-          </EmissorName>
+          <InfoNameInline>
+            <InfoName>
+              <span>Local:</span> Los Santos
+            </InfoName>
 
-          <AtosProcesso>Atos do Processo</AtosProcesso>
-          <Processo>
-            Manda, que o senhor Agentes e Delegados que participaram do
-            cumprimento do mandado de prisão em anexo, sob o nº 00001, expedido
-            em relação à Gabriel Budag com Registro Geral 239, nascido no Estado
-            Destiny Roleplay, situado na cidade de Los Santos, o civil será
-            atuado no código penal com artigos seguintes; Artigo 139, 287 e 331,
-            referente as provas anexadas.
+            <InfoName>
+              <span>Complemento:</span> Nada consta
+            </InfoName>
+          </InfoNameInline>
+
+          <CategoriaName style={{ marginTop: "15px" }}>
+            Informações do Declarante
+          </CategoriaName>
+          <hr style={{ marginBottom: "15px" }} />
+
+          <InfoNameInline>
+            <InfoName>
+              <span>Nome Completo</span> Daniel Souza
+            </InfoName>
+            <InfoName>
+              <span>Registro Geral (RG)</span> 301
+            </InfoName>
+
+            <InfoName>
+              <span>Telefone:</span> 232311322
+            </InfoName>
+          </InfoNameInline>
+
+          <InfoNameInline>
+            <InfoName>
+              <span>Ocupação:</span> Policial
+            </InfoName>
+            <InfoName>
+              <span>Cidade de Nascimento:</span> Los Santos
+            </InfoName>
+          </InfoNameInline>
+
+          <AtosProcesso>Objetos Envolvidos</AtosProcesso>
+          <Processo style={{ textAlign: "center" }}>
+            Fan 125 - Placa 2312344234 - COR Azul
           </Processo>
 
-          <Provas>Provas</Provas>
-          <ProvasImg></ProvasImg>
+          <Provas>Histórico</Provas>
+          <Processo>
+            Próximo a prefeitura, um cara de cor parda, blusa branca e short
+            preto, roubou minha moto apontando uma arma na minha cabeça, e foi
+            direção a Las Ventura.
+          </Processo>
 
-          <Expedido>Mandado expedido no dia 14 de novembro de 2020</Expedido>
+          <Expedido>Emetido no dia 14 de novembro de 2020</Expedido>
+          <InfoName style={{ textAlign: "center" }}>
+            Código de Controle: <span>213132932932</span>
+          </InfoName>
 
           <Rodape>
             <Solicitante>
-              <span>Escrivão</span>Luketa
+              <span>Diretor de Inteligência Policial</span>Daniel Souza
             </Solicitante>
-            <Delegado>
-              <span>Delegado Federal</span>Cabeçona
-            </Delegado>
           </Rodape>
         </View>
       </Container>

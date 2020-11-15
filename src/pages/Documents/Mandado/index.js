@@ -21,6 +21,7 @@ import {
   ProvasImg,
   Delegado,
   Rodape,
+  MandadoTitle,
 } from "./styled";
 import { FaArrowLeft } from "react-icons/fa/index";
 
@@ -47,6 +48,7 @@ function Mandado(props) {
       </Header>
       <Container>
         <View>
+          <MandadoTitle>Mandado de Prisão</MandadoTitle>
           <CategoriaName>Informações</CategoriaName>
           <hr style={{ marginBottom: "15px" }} />
           <InfoName>
@@ -83,16 +85,27 @@ function Mandado(props) {
           </Processo>
 
           <Provas>Provas</Provas>
-          <ProvasImg></ProvasImg>
+          <ProvasImg>
+            <blockquote class="imgur-embed-pub" lang="en" data-id="a/7B7e47N">
+              <a href="//imgur.com/a/7B7e47N">
+                Massive birbs harass police officer
+              </a>
+            </blockquote>
+            <script
+              async
+              src="//s.imgur.com/min/embed.js"
+              charset="utf-8"
+            ></script>
+          </ProvasImg>
 
           <Expedido>Mandado expedido no dia 14 de novembro de 2020</Expedido>
 
           <Rodape>
             <Solicitante>
-              <span>Escrivão</span>Luketa
+              <span>Diretor de Inteligência Policial</span>Daniel Souza
             </Solicitante>
             <Delegado>
-              <span>Delegado Federal</span>Cabeçona
+              <span>Delegado Federal</span>Cabeçona Ona
             </Delegado>
           </Rodape>
         </View>

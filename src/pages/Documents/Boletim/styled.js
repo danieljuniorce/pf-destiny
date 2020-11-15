@@ -11,13 +11,13 @@ const Container = styled.div`
 `;
 
 const Return = styled.div`
-  width: 100%;
   padding: 30px;
   background: #fff;
   font-size: 16pt;
 
   display: flex;
   align-items: center;
+  overflow-x: unset;
 `;
 
 const ButtonReturn = styled(Link)`
@@ -63,9 +63,14 @@ const TitleComplementare = styled.h3`
   font-weight: 100;
 `;
 
+const MandadoTitle = styled.h1`
+  text-align: center;
+  margin-bottom: 30px;
+`;
+
 const View = styled.div`
   width: 700px;
-  margin-top: 80px;
+  margin-top: 40px;
 `;
 
 const CategoriaName = styled.h2``;
@@ -75,9 +80,15 @@ const InfoName = styled.p`
   margin-top: 7px;
   margin-bottom: 7px;
   margin-left: 15px;
+  margin-right: 15px;
   span {
     font-weight: 600;
   }
+`;
+
+const InfoNameInline = styled.p`
+  display: flex;
+  justify-content: space-between;
 `;
 
 const EmissorName = styled.p`
@@ -119,18 +130,19 @@ const Provas = styled.div`
 
 const ProvasImg = styled.p`
   margin: 15px;
+  text-align: center;
 `;
 
 const Expedido = styled.div`
   text-align: center;
-  margin-top: 100px;
+  margin-top: 40px;
   font-size: 14pt;
 `;
 
 const Rodape = styled.div`
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: center;
 
   margin-top: 60px;
   margin-bottom: 40px;
@@ -183,4 +195,6 @@ export {
   Solicitante,
   Delegado,
   Rodape,
+  MandadoTitle,
+  InfoNameInline,
 };
