@@ -1,17 +1,21 @@
 import React from "react";
-import { Container, Painel, Logo, Title, RedirectRegister } from "./styled";
-
 import {
-  LinkButton,
-  FormHelperTextType,
-  FormControlType,
-  InputLabelType,
-  InputType,
-} from "../../components/global";
+  Container,
+  Painel,
+  Logo,
+  Title,
+  RedirectRegister,
+  Form,
+  Group,
+  Input,
+  Label,
+} from "./styled";
+
+import { LinkButton } from "../../components/global";
 
 import logo from "../../assets/logo.png";
 
-function Login() {
+function Login(props) {
   return (
     <Container>
       <Painel>
@@ -19,19 +23,19 @@ function Login() {
 
         <Title>Login no SIPFD</Title>
 
-        <FormControlType>
-          <InputLabelType>E-mail</InputLabelType>
-          <InputType type="email" name="email" required />
-          <FormHelperTextType>Insirar o e-mail</FormHelperTextType>
-        </FormControlType>
+        <Form>
+          <Group>
+            <Label>E-mail</Label>
+            <Input />
+          </Group>
 
-        <FormControlType>
-          <InputLabelType>Senha</InputLabelType>
-          <InputType type="password" name="password" required />
-          <FormHelperTextType>Insirar sua senha</FormHelperTextType>
-        </FormControlType>
+          <Group>
+            <Label>Password</Label>
+            <Input />
+          </Group>
+        </Form>
 
-        <LinkButton to="/dashboard" style={{ width: "170px" }}>
+        <LinkButton style={{ width: "150px" }} to="/dashboard">
           Entrar
         </LinkButton>
 

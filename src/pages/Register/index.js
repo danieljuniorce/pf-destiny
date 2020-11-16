@@ -1,96 +1,69 @@
 import React from "react";
-
 import {
   Container,
   Painel,
-  PainelEsquerdo,
-  PainelDireito,
   Logo,
   Title,
-  LoginRedirect,
+  RedirectRegister,
+  Form,
+  Group,
+  Input,
+  Label,
 } from "./styled";
-import {
-  FormControlType,
-  FormHelperTextType,
-  InputType,
-  InputLabelType,
-  LinkButton,
-} from "../../components/global";
+
+import { LinkButton } from "../../components/global";
 
 import logo from "../../assets/logo.png";
 
-function Register() {
+function Login(props) {
   return (
     <Container>
       <Painel>
-        <PainelEsquerdo>
-          <Title>Registro no SIPFD</Title>
-          <FormControlType>
-            <InputLabelType id="name">Nome</InputLabelType>
-            <InputType
-              type="text"
-              name="name"
-              id="name"
-              style={{ width: "400px" }}
-              required
-            />
-            <FormHelperTextType>
-              Insirar seu Nome e Sobronome.
-            </FormHelperTextType>
-          </FormControlType>
+        <Logo src={logo} alt="logo pf" />
 
-          <FormControlType>
-            <InputLabelType id="id">RG</InputLabelType>
-            <InputType
-              type="number"
-              name="id"
-              id="id"
-              style={{ width: "400px" }}
-              required
-            />
-            <FormHelperTextType>Insirar seu RG do Destiny.</FormHelperTextType>
-          </FormControlType>
+        <Title>Cadastrar no SIPFD</Title>
 
-          <FormControlType>
-            <InputLabelType id="id">Senha</InputLabelType>
-            <InputType
-              type="password"
-              name="password"
-              id="password"
-              style={{ width: "400px" }}
-              required
-            />
-            <FormHelperTextType>Insirar uma senha secreta.</FormHelperTextType>
-          </FormControlType>
+        <Form>
+          <Group>
+            <Label>Nome Completo</Label>
+            <Input />
+          </Group>
+          <Group>
+            <Label>Registro Geral (RG)</Label>
+            <Input />
+          </Group>
 
-          <FormControlType>
-            <InputLabelType id="id">Confirmar Senha</InputLabelType>
-            <InputType
-              type="password"
-              name="confirmpassword"
-              id="confirmpassword"
-              style={{ width: "400px" }}
-              required
-            />
-            <FormHelperTextType>
-              Confirmer sua senha secreta.
-            </FormHelperTextType>
-          </FormControlType>
+          <Group>
+            <Label>Usuário</Label>
+            <Input />
+          </Group>
 
-          <LinkButton to="/login" style={{ width: "160px" }}>
-            Registrar
-          </LinkButton>
+          <Group>
+            <Label>E-mail</Label>
+            <Input />
+          </Group>
 
-          <LoginRedirect to="/login">
-            Já sou Registrado, faça o login.
-          </LoginRedirect>
-        </PainelEsquerdo>
-        <PainelDireito>
-          <Logo src={logo} alt="logo pf" />
-        </PainelDireito>
+          <Group>
+            <Label>Senha</Label>
+            <Input />
+          </Group>
+
+          <Group>
+            <Label>Confirmar Senha</Label>
+            <Input />
+          </Group>
+        </Form>
+
+        <LinkButton style={{ width: "150px" }} to="/login">
+          Cadastrar
+        </LinkButton>
+
+        <RedirectRegister to="/login">
+          Já é registrado? Faça o login
+        </RedirectRegister>
       </Painel>
     </Container>
   );
 }
 
-export default Register;
+export default Login;
