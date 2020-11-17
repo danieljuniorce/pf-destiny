@@ -1,7 +1,7 @@
 import React from "react";
 import { FaArrowLeft } from "react-icons/fa/index";
 
-import Navbar from "../../components/Navbar";
+import Navbar from "../../../components/Navbar";
 import {
   Container,
   SecondTitlePainel,
@@ -18,7 +18,7 @@ import {
   TitleNameGroup,
   Final,
 } from "./styled";
-import { TitlePage, TitleReturnPage, Title } from "../../components/global";
+import { TitlePage, Title, TitleReturnPage } from "../../../components/global";
 
 function Inquerito() {
   return (
@@ -30,7 +30,7 @@ function Inquerito() {
             <FaArrowLeft size={19} />
             &nbsp;Retorna
           </TitleReturnPage>
-          <Title>Inquerito</Title>
+          <Title> Editar Inquerito</Title>
         </TitlePage>
         <Painel>
           <PainelTitle>

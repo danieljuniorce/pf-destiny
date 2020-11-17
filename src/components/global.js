@@ -44,12 +44,28 @@ const InputLabelType = styled(InputLabel)`
 
 const FormHelperTextType = styled(FormHelperText)``;
 
-const TitlePage = styled.h1`
-  color: #ddd;
+const TitlePage = styled.div`
   margin-top: 30px;
+  width: 700px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+const Title = styled.h1`
+  color: #ddd;
   font-weight: 400;
 
   margin-left: 50px;
+`;
+
+const TitleReturnPage = styled(Link)`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ddd;
+  text-decoration: none;
 `;
 
 export {
@@ -59,4 +75,6 @@ export {
   InputLabelType,
   FormHelperTextType,
   TitlePage,
+  Title,
+  TitleReturnPage,
 };

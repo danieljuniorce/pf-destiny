@@ -8,7 +8,7 @@ import {
   FaExclamationCircle,
 } from "react-icons/fa/index";
 
-import { TitlePage, LinkButton } from "../../components/global";
+import { TitlePage, TitleReturnPage, Title } from "../../components/global";
 import Navbar from "../../components/Navbar";
 import {
   Container,
@@ -33,7 +33,10 @@ function Dashboard() {
   return (
     <>
       <Navbar />
-      <TitlePage>Dashboard</TitlePage>
+      <TitlePage>
+        <TitleReturnPage></TitleReturnPage>
+        <Title>Dashboard</Title>
+      </TitlePage>
       <Container>
         <PainelLeft></PainelLeft>
         <PainelRight>

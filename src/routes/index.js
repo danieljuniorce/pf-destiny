@@ -16,6 +16,10 @@ import InqueritoDocuments from "../pages/Documents/Inquerito";
 import BoletimDocuments from "../pages/Documents/Boletim";
 import MandadoDocuments from "../pages/Documents/Mandado";
 
+import InqueritoEdit from "../pages/Edit/Inquerito";
+import BoletimEdit from "../pages/Edit/Boletim";
+import MandadoEdit from "../pages/Edit/Mandado";
+
 const Routes = () => (
   <BrowserRouter>
     <Switch>
@@ -39,6 +43,10 @@ const Routes = () => (
         component={InqueritoDocuments}
       />
       <Route path="/documentos/mandado/:number" component={MandadoDocuments} />
+
+      <Route path="/edit/mandado/:number" component={MandadoEdit} />
+      <Route path="/edit/inquerito/:number" component={InqueritoEdit} />
+      <Route path="/edit/boletim/:number" component={BoletimEdit} />
     </Switch>
   </BrowserRouter>
 );

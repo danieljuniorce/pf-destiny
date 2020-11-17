@@ -1,5 +1,4 @@
 import React from "react";
-import { FaArrowLeft } from "react-icons/fa/index";
 
 import {
   Container,
@@ -17,8 +16,9 @@ import {
   ButtonCreate,
   Final,
 } from "./styled";
-import { TitlePage, TitleReturnPage, Title } from "../../components/global";
-import Navbar from "../../components/Navbar";
+import { TitlePage, TitleReturnPage, Title } from "../../../components/global";
+import { FaArrowLeft } from "react-icons/fa/index";
+import Navbar from "../../../components/Navbar";
 
 function Boletim() {
   return (
@@ -31,7 +31,7 @@ function Boletim() {
             <FaArrowLeft size={19} />
             &nbsp;Retorna
           </TitleReturnPage>
-          <Title> Boletim</Title>
+          <Title> Editar Ocorrência</Title>
         </TitlePage>
 
         <Painel>

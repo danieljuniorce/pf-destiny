@@ -1,7 +1,7 @@
 import React from "react";
 import { FaArrowLeft } from "react-icons/fa/index";
 
-import Navbar from "../../components/Navbar";
+import Navbar from "../../../components/Navbar";
 import {
   Container,
   SecondTitlePainel,
@@ -18,7 +18,7 @@ import {
   TitleNameGroup,
   Final,
 } from "./styled";
-import { TitlePage, TitleReturnPage, Title } from "../../components/global";
+import { TitlePage, TitleReturnPage, Title } from "../../../components/global";
 
 function Mandado() {
   return (
@@ -30,7 +30,7 @@ function Mandado() {
             <FaArrowLeft size={19} />
             &nbsp;Retorna
           </TitleReturnPage>
-          <Title> Mandado</Title>
+          <Title> Editar Mandado</Title>
         </TitlePage>
         <Painel>
           <PainelTitle>

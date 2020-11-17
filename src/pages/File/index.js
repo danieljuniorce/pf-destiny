@@ -25,7 +25,7 @@ import {
   NameGroup,
 } from "./styled";
 import Navbar from "../../components/Navbar";
-import { FaPrint, FaEye, FaEdit } from "react-icons/fa/index";
+import { FaTimes, FaEye, FaEdit } from "react-icons/fa/index";
 
 class File extends Component {
   state = {
@@ -154,11 +154,14 @@ class File extends Component {
                           >
                             <FaEye size={15} />
                           </Button>
-                          <Button background="green">
+                          <Button
+                            background="green"
+                            to="/edit/boletim/12313123"
+                          >
                             <FaEdit size={15} />
                           </Button>
-                          <Button background="yellowgreen">
-                            <FaPrint size={15} />
+                          <Button background="red">
+                            <FaTimes size={15} />
                           </Button>
                         </Buttons>
                       </TableTd>
@@ -196,11 +199,14 @@ class File extends Component {
                           >
                             <FaEye size={15} />
                           </Button>
-                          <Button background="green">
+                          <Button
+                            background="green"
+                            to="/edit/inquerito/12313123"
+                          >
                             <FaEdit size={15} />
                           </Button>
-                          <Button background="yellowgreen">
-                            <FaPrint size={15} />
+                          <Button background="red">
+                            <FaTimes size={15} />
                           </Button>
                         </Buttons>
                       </TableTd>
@@ -238,11 +244,14 @@ class File extends Component {
                           >
                             <FaEye size={15} />
                           </Button>
-                          <Button background="green">
+                          <Button
+                            background="green"
+                            to="/edit/mandado/12313123"
+                          >
                             <FaEdit size={15} />
                           </Button>
-                          <Button background="yellowgreen">
-                            <FaPrint size={15} />
+                          <Button background="red">
+                            <FaTimes size={15} />
                           </Button>
                         </Buttons>
                       </TableTd>
