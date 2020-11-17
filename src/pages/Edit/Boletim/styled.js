@@ -48,7 +48,7 @@ const SecondInfoTitle = styled.p`
   background: #19b47c;
   height: 30px;
   line-height: 30px;
-  width: 90px;
+  width: 160px;
   text-align: center;
   border-radius: 8px;
 
@@ -124,7 +124,7 @@ const Final = styled.div`
 
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   margin-top: 55px;
 `;
 

@@ -138,6 +138,7 @@ class File extends Component {
                       <TableTh>Nº</TableTh>
                       <TableTh>Emitido por</TableTh>
                       <TableTh>Criado</TableTh>
+                      <TableTh>Situação</TableTh>
                       <TableTh>Opções</TableTh>
                     </TableTr>
                   </TableHead>
@@ -146,6 +147,7 @@ class File extends Component {
                       <TableTd>1</TableTd>
                       <TableTd>Daniel Souza</TableTd>
                       <TableTd>13/11/2020 06:56</TableTd>
+                      <TableTd>Analise</TableTd>
                       <TableTd>
                         <Buttons>
                           <Button
@@ -183,6 +185,7 @@ class File extends Component {
                       <TableTh>Nº</TableTh>
                       <TableTh>Emitido por</TableTh>
                       <TableTh>Criado</TableTh>
+                      <TableTh>Situação</TableTh>
                       <TableTh>Opções</TableTh>
                     </TableTr>
                   </TableHead>
@@ -191,6 +194,7 @@ class File extends Component {
                       <TableTd>1</TableTd>
                       <TableTd>Daniel Souza</TableTd>
                       <TableTd>13/11/2020 06:56</TableTd>
+                      <TableTd>Analise</TableTd>
                       <TableTd>
                         <Buttons>
                           <Button
@@ -228,6 +232,7 @@ class File extends Component {
                       <TableTh>Nº</TableTh>
                       <TableTh>Emitido por</TableTh>
                       <TableTh>Criado</TableTh>
+                      <TableTh>Situação</TableTh>
                       <TableTh>Opções</TableTh>
                     </TableTr>
                   </TableHead>
@@ -236,6 +241,7 @@ class File extends Component {
                       <TableTd>1</TableTd>
                       <TableTd>Daniel Souza</TableTd>
                       <TableTd>13/11/2020 06:56</TableTd>
+                      <TableTd>Analise</TableTd>
                       <TableTd>
                         <Buttons>
                           <Button

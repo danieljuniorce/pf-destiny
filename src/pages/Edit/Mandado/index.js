@@ -17,6 +17,7 @@ import {
   TextArea,
   TitleNameGroup,
   Final,
+  CreateBy,
 } from "./styled";
 import { TitlePage, TitleReturnPage, Title } from "../../../components/global";
 
@@ -90,6 +91,9 @@ function Mandado() {
             </Group>
 
             <Final>
+              <CreateBy>
+                Criado por DIP Daniel Souza - 17/11/2020 07:20
+              </CreateBy>
               <ButtonCreate>Novo Mandado</ButtonCreate>
             </Final>
           </Form>

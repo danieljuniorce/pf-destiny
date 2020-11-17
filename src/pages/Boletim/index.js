@@ -16,6 +16,7 @@ import {
   TextArea,
   ButtonCreate,
   Final,
+  CreateBy,
 } from "./styled";
 import { TitlePage, TitleReturnPage, Title } from "../../components/global";
 import Navbar from "../../components/Navbar";
@@ -37,7 +38,7 @@ function Boletim() {
         <Painel>
           <PainelTitle>
             <FirtInfoTitle>Boletim de Ocorrência</FirtInfoTitle>
-            <SecondInfoTitle>Informações</SecondInfoTitle>
+            <SecondInfoTitle>Nº 82913712731</SecondInfoTitle>
           </PainelTitle>
 
           <Form>
@@ -111,6 +112,7 @@ function Boletim() {
               <TextArea rows="10" />
             </Group>
             <Final>
+              <CreateBy>DIP Daniel Souza | 17/10/2020 as 07:20</CreateBy>
               <ButtonCreate>Cadastra Ocorrência</ButtonCreate>
             </Final>
           </Form>

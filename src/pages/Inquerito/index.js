@@ -17,6 +17,7 @@ import {
   TextArea,
   TitleNameGroup,
   Final,
+  CreateBy,
 } from "./styled";
 import { TitlePage, TitleReturnPage, Title } from "../../components/global";
 
@@ -35,7 +36,7 @@ function Inquerito() {
         <Painel>
           <PainelTitle>
             <FirstTitlePainel>Novo Inquerito</FirstTitlePainel>
-            <SecondTitlePainel>Informações</SecondTitlePainel>
+            <SecondTitlePainel>Nº 2020320382</SecondTitlePainel>
           </PainelTitle>
 
           <Form>
@@ -81,6 +82,7 @@ function Inquerito() {
               </Group>
             </GroupInline>
             <Final>
+              <CreateBy>DIP Daniel Souza - 17/11/2020 07:31</CreateBy>
               <ButtonCreate>Novo Inquerito</ButtonCreate>
             </Final>
           </Form>

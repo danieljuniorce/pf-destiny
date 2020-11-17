@@ -47,7 +47,8 @@ const SecondTitlePainel = styled.p`
   background: #737373;
   height: 30px;
   line-height: 30px;
-  width: 90px;
+  width: 160px;
+
   text-align: center;
   border-radius: 8px;
 
@@ -123,9 +124,11 @@ const Final = styled.div`
 
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
   margin-top: 20px;
 `;
+
+const CreateBy = styled.p``;
 
 const ButtonCreate = styled.button`
   height: 60px;
@@ -154,4 +157,5 @@ export {
   TextArea,
   Final,
   ButtonCreate,
+  CreateBy,
 };

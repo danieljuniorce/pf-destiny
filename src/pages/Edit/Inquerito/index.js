@@ -17,6 +17,7 @@ import {
   TextArea,
   TitleNameGroup,
   Final,
+  CreateBy,
 } from "./styled";
 import { TitlePage, Title, TitleReturnPage } from "../../../components/global";
 
@@ -81,6 +82,9 @@ function Inquerito() {
               </Group>
             </GroupInline>
             <Final>
+              <CreateBy>
+                Criado por DIP Daniel Souza - 17/11/2020 07:20
+              </CreateBy>
               <ButtonCreate>Novo Inquerito</ButtonCreate>
             </Final>
           </Form>

@@ -1,4 +1,5 @@
 import React from "react";
+import { FaArrowLeft } from "react-icons/fa/index";
 
 import {
   Container,
@@ -15,9 +16,9 @@ import {
   TextArea,
   ButtonCreate,
   Final,
+  CreateBy,
 } from "./styled";
 import { TitlePage, TitleReturnPage, Title } from "../../../components/global";
-import { FaArrowLeft } from "react-icons/fa/index";
 import Navbar from "../../../components/Navbar";
 
 function Boletim() {
@@ -37,7 +38,7 @@ function Boletim() {
         <Painel>
           <PainelTitle>
             <FirtInfoTitle>Boletim de Ocorrência</FirtInfoTitle>
-            <SecondInfoTitle>Informações</SecondInfoTitle>
+            <SecondInfoTitle>Nº 23123231</SecondInfoTitle>
           </PainelTitle>
 
           <Form>
@@ -111,6 +112,9 @@ function Boletim() {
               <TextArea rows="10" />
             </Group>
             <Final>
+              <CreateBy>
+                Criado por DIP Daniel Souza - 17/11/2020 07:20
+              </CreateBy>
               <ButtonCreate>Cadastra Ocorrência</ButtonCreate>
             </Final>
           </Form>
