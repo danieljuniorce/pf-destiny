@@ -12,11 +12,11 @@ const Container = styled.div`
 `;
 
 const Logo = styled.img`
+  margin-top: 25px;
   width: 90px;
 `;
 
 const Painel = styled.div`
-  height: 600px;
   width: 450px;
 
   background: #07070f;
@@ -27,6 +27,7 @@ const Painel = styled.div`
   align-items: center;
   flex-direction: column;
 
+  text-align: center;
   box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
   border-right: 2px solid yellow;
 `;
@@ -48,6 +49,7 @@ const Form = styled.form`
 
 const Group = styled.div`
   display: flex;
+  text-align: left;
   width: 100%;
 
   flex-direction: column;

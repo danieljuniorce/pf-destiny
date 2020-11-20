@@ -45,10 +45,12 @@ const RedirectRegister = styled(Link)`
 const Form = styled.form`
   margin-left: 15px;
   margin-right: 15px;
+  text-align: center;
 `;
 
 const Group = styled.div`
   display: flex;
+  text-align: left;
   width: 100%;
 
   flex-direction: column;
@@ -85,6 +87,14 @@ const Input = styled.input`
 
   height: 35px;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0, 0.2);
+
+  &:before {
+    border: 0;
+  }
+
+  &:after {
+    border: 0;
+  }
 `;
 
 export {

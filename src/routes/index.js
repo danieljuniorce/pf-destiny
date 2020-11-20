@@ -1,6 +1,9 @@
 import React from "react";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
+import { PrivateRoute } from "./private";
+import { PublicRoute } from "./public";
+
 import Home from "../pages/Home";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
@@ -23,30 +26,36 @@ import MandadoEdit from "../pages/Edit/Mandado";
 const Routes = () => (
   <BrowserRouter>
     <Switch>
-      <Route path="/" exact component={Home} />
-      <Route path="/login" exact component={Login} />
-      <Route path="/registrar" exact component={Register} />
+      <PublicRoute path="/" exact component={Home} />
+      <PublicRoute path="/login" exact component={Login} />
+      <PublicRoute path="/registrar" exact component={Register} />
 
-      <Route path="/dashboard" component={Dashboard} />
-      <Route path="/usuario/perfil" component={Perfil} />
-      <Route path="/usuario/configuracao" component={Configurate} />
+      <PrivateRoute path="/dashboard" component={Dashboard} />
+      <PrivateRoute path="/usuario/perfil" component={Perfil} />
+      <PrivateRoute path="/usuario/configuracao" component={Configurate} />
 
-      <Route path="/arquivos" exact component={File} />
-      <Route path="/arquivos/solicitacoes" component={Order} />
-      <Route path="/arquivos/boletim" component={Boletim} />
-      <Route path="/arquivos/inquerito" component={Inquerito} />
-      <Route path="/arquivos/mandado" component={Mandado} />
+      <PrivateRoute path="/arquivos" exact component={File} />
+      <PrivateRoute path="/arquivos/solicitacoes" component={Order} />
+      <PrivateRoute path="/arquivos/boletim" component={Boletim} />
+      <PrivateRoute path="/arquivos/inquerito" component={Inquerito} />
+      <PrivateRoute path="/arquivos/mandado" component={Mandado} />
 
-      <Route path="/documentos/boletim/:number" component={BoletimDocuments} />
-      <Route
+      <PrivateRoute
+        path="/documentos/boletim/:number"
+        component={BoletimDocuments}
+      />
+      <PrivateRoute
         path="/documentos/inquerito/:number"
         component={InqueritoDocuments}
       />
-      <Route path="/documentos/mandado/:number" component={MandadoDocuments} />
+      <PrivateRoute
+        path="/documentos/mandado/:number"
+        component={MandadoDocuments}
+      />
 
-      <Route path="/edit/mandado/:number" component={MandadoEdit} />
-      <Route path="/edit/inquerito/:number" component={InqueritoEdit} />
-      <Route path="/edit/boletim/:number" component={BoletimEdit} />
+      <PrivateRoute path="/edit/mandado/:number" component={MandadoEdit} />
+      <PrivateRoute path="/edit/inquerito/:number" component={InqueritoEdit} />
+      <PrivateRoute path="/edit/boletim/:number" component={BoletimEdit} />
     </Switch>
   </BrowserRouter>
 );

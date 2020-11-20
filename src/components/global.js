@@ -7,7 +7,7 @@ import {
   FormHelperText,
 } from "@material-ui/core";
 
-const LinkButton = styled(Link)`
+const LinkButton = styled.button`
   width: 100%;
   height: 60px;
   background: #e02041;
@@ -68,6 +68,26 @@ const TitleReturnPage = styled(Link)`
   text-decoration: none;
 `;
 
+const Alert = styled.div`
+  height: 80px;
+  line-height: 80px;
+  width: 320px;
+
+  display: ${(props) => (props.display ? "flex" : "none")};
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 10px;
+  border-bottom: 4px solid ${(props) => props.colorBottom};
+
+  text-align: center;
+  background: ${(props) => props.background};
+  color: ${(props) => props.color};
+  top: 40px;
+  left: 20px;
+  margin-bottom: 15px;
+`;
+
 export {
   LinkButton,
   InputType,
@@ -77,4 +97,5 @@ export {
   TitlePage,
   Title,
   TitleReturnPage,
+  Alert,
 };
