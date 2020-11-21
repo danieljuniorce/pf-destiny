@@ -31,6 +31,11 @@ function Login(props) {
   async function handleInputs(e) {
     e.preventDefault();
 
+    setStatus(true);
+    setText("Processando, aguarde...");
+    setInfo("#3498DB");
+    setPassword("");
+
     try {
       const response = await api.post("/user", {
         name,

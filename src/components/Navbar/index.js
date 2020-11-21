@@ -13,7 +13,7 @@ import {
   MenuItemNav,
   MenuNav,
 } from "./styled";
-
+import { logout } from "../../auth";
 import logo from "../../assets/logo.png";
 import perfil from "../../assets/perfil.png";
 
@@ -33,13 +33,10 @@ function Navbar() {
     <Container>
       <Lista>
         <Logo src={logo} alt="logo" />
-        <Links style={{ marginLeft: "14px" }} to="/dashboard">
-          Dashboard
-        </Links>
-        <Links to="/arquivos">Arquivos</Links>
 
-        <Links to="/contigente">Contigente</Links>
-        <Links to="/procurados">Procurados</Links>
+        <Links style={{ marginLeft: "14px" }} to="/arquivos">
+          Arquivos
+        </Links>
       </Lista>
       <Lista>
         <ButtonMenu
@@ -87,11 +84,15 @@ function Navbar() {
             </Link>
           </MenuItemNav>
           <Divider />
-          <MenuItemNav onClick={handleClose}>
+          <MenuItemNav
+            onClick={() => {
+              handleClose();
+              logout();
+            }}
+          >
             <FaExternalLinkAlt size={14} />
             &nbsp;
             <Link
-              to="/login"
               style={{
                 textDecoration: "none",
                 color: "#000",

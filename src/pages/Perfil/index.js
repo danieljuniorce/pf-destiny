@@ -12,7 +12,6 @@ import {
   GroupInline,
   Input,
   UserInfoText,
-  Divider,
   Name,
   Status,
   PerfilImg,
@@ -20,17 +19,21 @@ import {
   NumberDistinctive,
 } from "./styled";
 import Navbar from "../../components/Navbar";
-import { TitlePage } from "../../components/global";
 import { Merito, Insignia } from "../../components/insignia";
 import { FaMedal } from "react-icons/fa/index";
 import perfil from "../../assets/perfil.png";
+import {
+  getName,
+  getCharge,
+  getDistinctive,
+  getEquip,
+  getRg,
+} from "../../auth";
 
 function Perfil() {
   return (
     <>
       <Navbar />
-
-      <TitlePage style={{ marginLeft: "115px" }}>Perfil</TitlePage>
 
       <Container>
         <ContentPerfil>
@@ -44,41 +47,24 @@ function Perfil() {
             <GroupInline>
               <Group>
                 <Label>Nome</Label>
-                <Input name="name" disabled value="Daniel Souza" />
-              </Group>
-              <Group>
-                <Label>Username</Label>
-                <Input disabled value="danieljuniorce" />
-              </Group>
-            </GroupInline>
-
-            <GroupInline>
-              <Group>
-                <Label>E-mail</Label>
-                <Input
-                  type="email"
-                  disabled
-                  value="danieljuniorce@hotmail.com"
-                />
+                <Input name="name" disabled value={getName()} />
               </Group>
               <Group>
                 <Label>RG</Label>
-                <Input disabled value="301" />
+                <Input disabled value={getRg()} />
               </Group>
             </GroupInline>
-
-            <Divider />
 
             <UserInfoText>Atribuições</UserInfoText>
 
             <GroupInline>
               <Group>
                 <Label>Cargo</Label>
-                <Input disabled value="Diretor de Inteligência Policial" />
+                <Input disabled value={getCharge()} />
               </Group>
               <Group>
                 <Label>Equipe</Label>
-                <Input disabled value="Inteligência Policial" />
+                <Input disabled value={getEquip()} />
               </Group>
             </GroupInline>
           </Form>
@@ -87,15 +73,17 @@ function Perfil() {
         <InfoPerfil>
           <PerfilImg src={perfil} alt="perfil img" />
           <Status color="green">Online</Status>
-          <Name>Daniel Souza</Name>
-          <Cargo>Diretor de Inteligência Policial</Cargo>
-          <NumberDistinctive>Distintivo Nº 01</NumberDistinctive>
+          <Name>{getName()}</Name>
+          <Cargo>{getCharge()}</Cargo>
+          <NumberDistinctive>
+            Distintivo Nº {getDistinctive()}
+          </NumberDistinctive>
 
-          <UserInfoText style={{ marginTop: "30px" }}>
+          <UserInfoText style={{ marginTop: "30px", display: "none" }}>
             Condecorações
           </UserInfoText>
 
-          <Insignia>
+          <Insignia style={{ display: "none" }}>
             <Merito background="green">
               <FaMedal size={18} />
             </Merito>

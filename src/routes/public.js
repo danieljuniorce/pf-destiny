@@ -8,7 +8,7 @@ export const PublicRoute = ({ component: Component, ...rest }) => (
     render={(props) =>
       isAuthenticated() ? (
         <Redirect
-          to={{ pathname: "/dashboard", state: { from: props.location } }}
+          to={{ pathname: "/arquivos", state: { from: props.location } }}
         />
       ) : (
         <Component {...props} />

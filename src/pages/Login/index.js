@@ -36,6 +36,11 @@ function Login(props) {
   async function handleInput(e) {
     e.preventDefault();
 
+    setStatus(true);
+    setText("Processando, aguarde...");
+    setInfo("#3498DB");
+    setPassword("");
+
     try {
       const response = await api.post("/user/login", {
         email,
@@ -87,7 +92,7 @@ function Login(props) {
         return setTimeout(() => {
           setStatus(false);
           login(response.data.token);
-          props.history.push("/dashboard");
+          props.history.push("/arquivos");
         }, 3500);
       }
     } catch (e) {

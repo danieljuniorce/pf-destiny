@@ -5,6 +5,7 @@ const login = (token) => {
   localStorage.setItem(TOKEN_KEY, token);
 };
 const logout = () => {
+  removerItems();
   return localStorage.removeItem(TOKEN_KEY);
 };
 
@@ -56,6 +57,15 @@ const getCharge = () => {
   return localStorage.getItem("charge");
 };
 
+const removerItems = () => {
+  localStorage.removeItem("id");
+  localStorage.removeItem("name");
+  localStorage.removeItem("charge");
+  localStorage.removeItem("rg");
+  localStorage.removeItem("equip");
+  localStorage.removeItem("distinctive");
+};
+
 export {
   isAuthenticated,
   logout,
@@ -73,4 +83,5 @@ export {
   setName,
   getId,
   setId,
+  removerItems,
 };
