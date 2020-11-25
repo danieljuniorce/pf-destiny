@@ -19,6 +19,7 @@ import {
   setDistinctive,
   setEquip,
   setId,
+  setAcl,
 } from "../../auth";
 import { LinkButton, Alert } from "../../components/global";
 import api from "../../api";
@@ -79,6 +80,7 @@ function Login(props) {
         charge,
         rg,
         active,
+        acl,
       } = response.data.user;
 
       setRg(rg);
@@ -87,13 +89,14 @@ function Login(props) {
       setName(name);
       setCharge(charge);
       setEquip(equip);
+      setAcl(acl);
 
       if (active === 1) {
         return setTimeout(() => {
           setStatus(false);
           login(response.data.token);
           props.history.push("/arquivos");
-        }, 3500);
+        }, 1500);
       }
     } catch (e) {
       setPassword("");

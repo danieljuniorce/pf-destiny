@@ -35,7 +35,7 @@ function Boletim(props) {
   const [comunication, setComunication] = useState("");
   const [local, setLocal] = useState("");
   const [complemente, setComplemente] = useState("");
-  const [name, setName] = useState("");
+  const [nameBoletim, setNameBoletim] = useState("");
   const [rg, setRg] = useState("");
   const [job, setJob] = useState("");
   const [phone, setPhone] = useState("");
@@ -64,7 +64,7 @@ function Boletim(props) {
           comunication,
           local,
           complemente,
-          name,
+          nameBoletim,
           rg,
           job,
           phone,
@@ -205,8 +205,8 @@ function Boletim(props) {
               <Label>Nome Completo</Label>
               <Input
                 type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
+                value={nameBoletim}
+                onChange={(e) => setNameBoletim(e.target.value)}
                 required
               />
             </Group>

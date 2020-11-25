@@ -13,7 +13,7 @@ import {
   MenuItemNav,
   MenuNav,
 } from "./styled";
-import { logout } from "../../auth";
+import { logout, getAcl } from "../../auth";
 import logo from "../../assets/logo.png";
 import perfil from "../../assets/perfil.png";
 
@@ -37,6 +37,7 @@ function Navbar() {
         <Links style={{ marginLeft: "14px" }} to="/arquivos">
           Arquivos
         </Links>
+        {getAcl() === "admin" ? <Links to="/contigente">Contigente</Links> : ""}
       </Lista>
       <Lista>
         <ButtonMenu
@@ -69,7 +70,7 @@ function Navbar() {
               Perfil
             </Link>
           </MenuItemNav>
-          <MenuItemNav onClick={handleClose}>
+          <MenuItemNav onClick={handleClose} style={{ display: "none" }}>
             <FaCog size={14} />
             &nbsp;
             <Link

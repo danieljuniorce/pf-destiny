@@ -46,7 +46,7 @@ const setRg = (value) => {
 };
 
 const getRg = () => {
-  return localStorage.getItem("rg");
+  return parseInt(localStorage.getItem("rg"));
 };
 
 const setCharge = (value) => {
@@ -57,6 +57,14 @@ const getCharge = () => {
   return localStorage.getItem("charge");
 };
 
+const setAcl = (value) => {
+  localStorage.setItem("acl", value);
+};
+
+const getAcl = () => {
+  return localStorage.getItem("acl");
+};
+
 const removerItems = () => {
   localStorage.removeItem("id");
   localStorage.removeItem("name");
@@ -64,6 +72,7 @@ const removerItems = () => {
   localStorage.removeItem("rg");
   localStorage.removeItem("equip");
   localStorage.removeItem("distinctive");
+  localStorage.removeItem("acl");
 };
 
 export {
@@ -83,5 +92,7 @@ export {
   setName,
   getId,
   setId,
+  setAcl,
+  getAcl,
   removerItems,
 };

@@ -23,9 +23,12 @@ import {
   Button,
   ButtonNameGroup,
   NameGroup,
+  InfoBoletimExist,
 } from "./styled";
 import Navbar from "../../components/Navbar";
 import { FaTimes, FaEye, FaEdit } from "react-icons/fa/index";
+import api from "../../api";
+import { getToken } from "../../auth";
 
 class File extends Component {
   state = {
@@ -35,6 +38,7 @@ class File extends Component {
     boletimActive: "#05050A",
     inqueritoActive: "#101021",
     mandadoActive: "#101021",
+    boletims: [],
   };
 
   handleButton(type) {
@@ -68,6 +72,18 @@ class File extends Component {
         mandadoActive: "#05050A",
       });
     }
+  }
+
+  async componentWillMount() {
+    try {
+      const response = await api.get("/boletim", {
+        headers: {
+          Authorization: `Bearer ${getToken()}`,
+        },
+      });
+
+      this.setState({ boletims: response.data });
+    } catch (e) {}
   }
 
   render() {
@@ -104,7 +120,7 @@ class File extends Component {
                       Boletim de Ocorrências
                     </MenuButton>
                   </MenuItem>
-                  <MenuItem>
+                  <MenuItem style={{ display: "none" }}>
                     <MenuButton
                       type="button"
                       onClick={() => this.handleButton("inquerito")}
@@ -113,7 +129,7 @@ class File extends Component {
                       Inqueritos
                     </MenuButton>
                   </MenuItem>
-                  <MenuItem>
+                  <MenuItem style={{ display: "none" }}>
                     <MenuButton
                       type="button"
                       onClick={() => this.handleButton("mandado")}
@@ -143,31 +159,43 @@ class File extends Component {
                     </TableTr>
                   </TableHead>
                   <TableBody>
-                    <TableTr>
-                      <TableTd>1</TableTd>
-                      <TableTd>Daniel Souza</TableTd>
-                      <TableTd>13/11/2020 06:56</TableTd>
-                      <TableTd>Analise</TableTd>
-                      <TableTd>
-                        <Buttons>
-                          <Button
-                            background="blue"
-                            to="/documentos/boletim/1232342"
-                          >
-                            <FaEye size={15} />
-                          </Button>
-                          <Button
-                            background="green"
-                            to="/edit/boletim/12313123"
-                          >
-                            <FaEdit size={15} />
-                          </Button>
-                          <Button background="red">
-                            <FaTimes size={15} />
-                          </Button>
-                        </Buttons>
-                      </TableTd>
-                    </TableTr>
+                    {this.state.boletims.length === 0 ? (
+                      <InfoBoletimExist>
+                        Sem Boletim cadastrado!
+                      </InfoBoletimExist>
+                    ) : (
+                      this.state.boletims.map((data) => (
+                        <TableTr key={data.number}>
+                          <TableTd>{data.number}</TableTd>
+                          <TableTd>{data.name}</TableTd>
+                          <TableTd>{data.comunication}</TableTd>
+                          <TableTd>
+                            {data.situation === "analyze"
+                              ? "Analise"
+                              : "Concluido"}
+                          </TableTd>
+                          <TableTd>
+                            <Buttons>
+                              <Button
+                                background="blue"
+                                to={`/documentos/boletim/${data.number}`}
+                              >
+                                <FaEye size={15} />
+                              </Button>
+                              <Button
+                                background="green"
+                                to={`/edit/boletim/${data.number}`}
+                              >
+                                <FaEdit size={15} />
+                              </Button>
+                              <Button background="red" to="/">
+                                <FaTimes size={15} />
+                              </Button>
+                            </Buttons>
+                          </TableTd>
+                        </TableTr>
+                      ))
+                    )}
                   </TableBody>
                 </Table>
               </StructTable>
@@ -209,7 +237,7 @@ class File extends Component {
                           >
                             <FaEdit size={15} />
                           </Button>
-                          <Button background="red">
+                          <Button background="red" to="/">
                             <FaTimes size={15} />
                           </Button>
                         </Buttons>
@@ -256,7 +284,7 @@ class File extends Component {
                           >
                             <FaEdit size={15} />
                           </Button>
-                          <Button background="red">
+                          <Button background="red" to="/">
                             <FaTimes size={15} />
                           </Button>
                         </Buttons>

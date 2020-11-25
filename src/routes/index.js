@@ -9,19 +9,23 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import Dashboard from "../pages/Dashboard";
 import Perfil from "../pages/Perfil";
-import Configurate from "../pages/Configurate";
+//import Configurate from "../pages/Configurate";
 import File from "../pages/File";
-import Order from "../pages/Order";
-import Inquerito from "../pages/Inquerito";
+//import Order from "../pages/Order";
+//import Inquerito from "../pages/Inquerito";
 import Boletim from "../pages/Boletim";
-import Mandado from "../pages/Mandado";
-import InqueritoDocuments from "../pages/Documents/Inquerito";
+//import Mandado from "../pages/Mandado";
+//import InqueritoDocuments from "../pages/Documents/Inquerito";
 import BoletimDocuments from "../pages/Documents/Boletim";
-import MandadoDocuments from "../pages/Documents/Mandado";
+import ContigenteDocuments from "../pages/Documents/Contigente";
 
-import InqueritoEdit from "../pages/Edit/Inquerito";
-import BoletimEdit from "../pages/Edit/Boletim";
+//import MandadoDocuments from "../pages/Documents/Mandado";
+
+//import InqueritoEdit from "../pages/Edit/Inquerito";
+//import BoletimEdit from "../pages/Edit/Boletim";
 import MandadoEdit from "../pages/Edit/Mandado";
+
+import Contigente from "../pages/Contigente";
 
 const Routes = () => (
   <BrowserRouter>
@@ -32,18 +36,32 @@ const Routes = () => (
 
       <PrivateRoute path="/dashboard" component={Dashboard} />
       <PrivateRoute path="/usuario/perfil" component={Perfil} />
-      <PrivateRoute path="/usuario/configuracao" component={Configurate} />
 
       <PrivateRoute path="/arquivos" exact component={File} />
-      <PrivateRoute path="/arquivos/solicitacoes" component={Order} />
-      <PrivateRoute path="/arquivos/boletim" component={Boletim} />
-      <PrivateRoute path="/arquivos/inquerito" component={Inquerito} />
-      <PrivateRoute path="/arquivos/mandado" component={Mandado} />
+      <PrivateRoute path="/arquivos/boletim" exact component={Boletim} />
 
       <PrivateRoute
         path="/documentos/boletim/:number"
         component={BoletimDocuments}
       />
+      <PrivateRoute
+        path="/documentos/contigente/:rg"
+        component={ContigenteDocuments}
+      />
+
+      <PrivateRoute path="/edit/mandado/:number" component={MandadoEdit} />
+
+      <PrivateRoute path="/contigente" component={Contigente} />
+    </Switch>
+  </BrowserRouter>
+);
+
+export default Routes;
+
+/*
+      <PrivateRoute path="/usuario/configuracao" component={Configurate} />
+
+
       <PrivateRoute
         path="/documentos/inquerito/:number"
         component={InqueritoDocuments}
@@ -53,11 +71,10 @@ const Routes = () => (
         component={MandadoDocuments}
       />
 
-      <PrivateRoute path="/edit/mandado/:number" component={MandadoEdit} />
-      <PrivateRoute path="/edit/inquerito/:number" component={InqueritoEdit} />
+            <PrivateRoute path="/edit/inquerito/:number" component={InqueritoEdit} />
       <PrivateRoute path="/edit/boletim/:number" component={BoletimEdit} />
-    </Switch>
-  </BrowserRouter>
-);
 
-export default Routes;
+            <PrivateRoute path="/arquivos/inquerito" exact component={Inquerito} />
+      <PrivateRoute path="/arquivos/mandado" exact component={Mandado} />
+
+*/

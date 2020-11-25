@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Container,
   View,
@@ -22,10 +22,24 @@ import {
   InfoNameInline,
 } from "./styled";
 import { FaArrowLeft } from "react-icons/fa/index";
-
+import api from "../../../api";
+import { getToken } from "../../../auth";
 import logo from "../../../assets/logo.png";
 
 function Boletim(props) {
+  const [data, setData] = useState({});
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(async () => {
+    try {
+      const response = await api.get(`/boletim/${props.match.params.number}`, {
+        headers: { Authorization: `Bearer ${getToken()}` },
+      });
+
+      setData(response.data);
+    } catch (e) {}
+  }, [props.match.params.number]);
+
   return (
     <>
       <Return>
@@ -52,24 +66,24 @@ function Boletim(props) {
           <CategoriaName>Dados da Ocorrência</CategoriaName>
           <hr style={{ marginBottom: "15px" }} />
           <InfoName>
-            <span>Natureza do Fato:</span> Roubo de Veículo
+            <span>Natureza do Fato:</span> {data.fact}
           </InfoName>
           <InfoNameInline>
             <InfoName>
-              <span>Data/Hora da Comunicação</span> 15/11/2020 02:59
+              <span>Data/Hora da Comunicação</span> {data.comunication}
             </InfoName>
             <InfoName>
-              <span>Data/Hora da Ocorrência</span> 15/11/2020 02:59
+              <span>Data/Hora da Ocorrência</span> {data.occurrence}
             </InfoName>
           </InfoNameInline>
 
           <InfoNameInline>
             <InfoName>
-              <span>Local:</span> Los Santos
+              <span>Local:</span> {data.local}
             </InfoName>
 
             <InfoName>
-              <span>Complemento:</span> Nada consta
+              <span>Complemento:</span> {data.complemente}
             </InfoName>
           </InfoNameInline>
 
@@ -80,46 +94,43 @@ function Boletim(props) {
 
           <InfoNameInline>
             <InfoName>
-              <span>Nome Completo</span> Daniel Souza
+              <span>Nome Completo</span> {data.nameBoletim}
             </InfoName>
             <InfoName>
-              <span>Registro Geral (RG)</span> 301
+              <span>Registro Geral (RG)</span> {data.rg}
             </InfoName>
 
             <InfoName>
-              <span>Telefone:</span> 232311322
+              <span>Telefone:</span> {data.phone}
             </InfoName>
           </InfoNameInline>
 
           <InfoNameInline>
             <InfoName>
-              <span>Ocupação:</span> Policial
+              <span>Ocupação:</span> {data.job}
             </InfoName>
             <InfoName>
-              <span>Cidade de Nascimento:</span> Los Santos
+              <span>Cidade de Nascimento:</span> {data.city}
             </InfoName>
           </InfoNameInline>
 
           <AtosProcesso>Objetos Envolvidos</AtosProcesso>
           <Processo style={{ textAlign: "center" }}>
-            Fan 125 - Placa 2312344234 - COR Azul
+            {data.description}
           </Processo>
 
           <Provas>Histórico</Provas>
-          <Processo>
-            Próximo a prefeitura, um cara de cor parda, blusa branca e short
-            preto, roubou minha moto apontando uma arma na minha cabeça, e foi
-            direção a Las Ventura.
-          </Processo>
+          <Processo>{data.historic}</Processo>
 
-          <Expedido>Emetido no dia 14 de novembro de 2020</Expedido>
+          <Expedido>Emetido no dia {data.emit}</Expedido>
           <InfoName style={{ textAlign: "center" }}>
-            Código de Controle: <span>213132932932</span>
+            Código de Controle: <span>{data.number}</span>
           </InfoName>
 
           <Rodape>
             <Solicitante>
-              <span>Diretor de Inteligência Policial</span>Daniel Souza
+              <span>{data.charge}</span>
+              {data.name}
             </Solicitante>
           </Rodape>
         </View>
