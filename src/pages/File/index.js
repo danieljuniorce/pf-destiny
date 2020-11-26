@@ -83,7 +83,9 @@ class File extends Component {
       });
 
       this.setState({ boletims: response.data });
-    } catch (e) {}
+    } catch (e) {
+      console.log(e);
+    }
   }
 
   render() {
@@ -187,9 +189,6 @@ class File extends Component {
                                 to={`/edit/boletim/${data.number}`}
                               >
                                 <FaEdit size={15} />
-                              </Button>
-                              <Button background="red" to="/">
-                                <FaTimes size={15} />
                               </Button>
                             </Buttons>
                           </TableTd>

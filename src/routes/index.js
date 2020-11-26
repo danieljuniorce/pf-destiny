@@ -22,8 +22,8 @@ import ContigenteDocuments from "../pages/Documents/Contigente";
 //import MandadoDocuments from "../pages/Documents/Mandado";
 
 //import InqueritoEdit from "../pages/Edit/Inquerito";
-//import BoletimEdit from "../pages/Edit/Boletim";
-import MandadoEdit from "../pages/Edit/Mandado";
+import BoletimEdit from "../pages/Edit/Boletim";
+//import MandadoEdit from "../pages/Edit/Mandado";
 
 import Contigente from "../pages/Contigente";
 
@@ -49,7 +49,7 @@ const Routes = () => (
         component={ContigenteDocuments}
       />
 
-      <PrivateRoute path="/edit/mandado/:number" component={MandadoEdit} />
+      <PrivateRoute path="/edit/boletim/:number" component={BoletimEdit} />
 
       <PrivateRoute path="/contigente" component={Contigente} />
     </Switch>
@@ -72,7 +72,7 @@ export default Routes;
       />
 
             <PrivateRoute path="/edit/inquerito/:number" component={InqueritoEdit} />
-      <PrivateRoute path="/edit/boletim/:number" component={BoletimEdit} />
+      <PrivateRoute path="/edit/mandado/:number" component={MandadoEdit} />
 
             <PrivateRoute path="/arquivos/inquerito" exact component={Inquerito} />
       <PrivateRoute path="/arquivos/mandado" exact component={Mandado} />

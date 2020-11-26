@@ -1,4 +1,4 @@
-const TOKEN_KEY = null;
+const TOKEN_KEY = "token";
 const isAuthenticated = () => localStorage.getItem(TOKEN_KEY) !== null;
 const getToken = () => localStorage.getItem(TOKEN_KEY);
 const login = (token) => {

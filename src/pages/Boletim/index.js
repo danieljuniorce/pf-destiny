@@ -43,7 +43,7 @@ function Boletim(props) {
   const [description, setDescription] = useState("");
   const [historic, setHistoric] = useState("");
 
-  const [clock, setClock] = useState(new Date());
+  const clock = new Date();
 
   const [status, setStatus] = useState(false);
   const [info, setInfo] = useState("#CB4335");
@@ -129,21 +129,6 @@ function Boletim(props) {
             <SecondInfoTitle>Informações</SecondInfoTitle>
           </PainelTitle>
 
-          <Alert
-            background="#0A0B16"
-            color={info}
-            colorBottom={info}
-            display={status}
-            style={{ width: "700px" }}
-          >
-            <LoadingSpin
-              width="3px"
-              duration="2s"
-              size="19px"
-              primaryColor={info}
-            />{" "}
-            &nbsp; {text}
-          </Alert>
           <Form onSubmit={(e) => handleInput(e)}>
             <TitleNameGroup>Dados da Ocorrência</TitleNameGroup>
 
@@ -274,6 +259,21 @@ function Boletim(props) {
                 required
               />
             </Group>
+            <Alert
+              background="#0A0B16"
+              color={info}
+              colorBottom={info}
+              display={status}
+              style={{ width: "670px" }}
+            >
+              <LoadingSpin
+                width="3px"
+                duration="2s"
+                size="19px"
+                primaryColor={info}
+              />{" "}
+              &nbsp; {text}
+            </Alert>
             <Final>
               <CreateBy>
                 {getCharge()}
