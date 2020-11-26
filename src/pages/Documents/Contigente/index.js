@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Redirect } from "react-router-dom";
 
 import {
   Container,
@@ -191,6 +190,7 @@ function Contigente(props) {
                 <Option defaultChecked>Escolha a equipe</Option>
 
                 <Option value="Diretoria">Diretoria</Option>
+                <Option value="Controladoria">Controladoria</Option>
                 <Option value="Tráfico de Armas">Tráfico de Armas</Option>
                 <Option value="Tráfico de Drogas">Tráfico de Drogas</Option>
                 <Option value="Crime Organizado">Crime Organizado</Option>
