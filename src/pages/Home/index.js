@@ -1,6 +1,12 @@
 import React from "react";
-import { Container, Logo, Title, ButtonArea, Footer } from "./styled";
-import { LinkButton } from "../../components/global";
+import {
+  Container,
+  Logo,
+  Title,
+  ButtonArea,
+  Footer,
+  LinkRedirect,
+} from "./styled";
 
 import logo from "../../assets/logo.png";
 
@@ -11,8 +17,8 @@ function Home() {
       <Title>Sistema de Informação da Policia Federal do Destiny</Title>
 
       <ButtonArea>
-        <LinkButton to="/login">Login</LinkButton> -
-        <LinkButton to="/registrar">Registrar</LinkButton>
+        <LinkRedirect to="/login">Login</LinkRedirect> -
+        <LinkRedirect to="/registrar">Registrar</LinkRedirect>
       </ButtonArea>
 
       <Footer>

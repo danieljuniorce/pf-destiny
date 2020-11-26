@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   display: flex;
@@ -32,4 +33,24 @@ const Footer = styled.div`
   color: #fff;
 `;
 
-export { Container, Logo, Title, ButtonArea, Footer };
+const LinkRedirect = styled(Link)`
+  width: 100%;
+  height: 60px;
+  background: #e02041;
+  border: 0;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 700;
+  margin-top: 22px;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 60px;
+  transition: filter 0.2s;
+  text-align: center;
+  & {
+    filter: brightness(90%);
+  }
+`;
+
+export { Container, Logo, Title, ButtonArea, Footer, LinkRedirect };
